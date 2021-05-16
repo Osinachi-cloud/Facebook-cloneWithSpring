@@ -5,8 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -38,18 +36,5 @@ public class User {
 
     @Column(nullable = false)
     private String gender;
-
-
-    @OneToMany
-    private List<Post> listOfPosts = new ArrayList<>();
-
-    @OneToMany
-    private List<Comment> listOfComments = new ArrayList<>();
-
-    @OneToMany
-    private List<PostLikes> listOfPostLikes = new ArrayList<>();
-
-    @OneToMany
-    private List<CommentLikes> listOfCommentLikes = new ArrayList<>();
 
 }
