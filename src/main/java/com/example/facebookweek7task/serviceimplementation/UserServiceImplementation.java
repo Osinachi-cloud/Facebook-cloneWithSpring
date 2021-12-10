@@ -47,6 +47,7 @@ public class UserServiceImplementation implements UserService {
      * @param user the user to be logged in
      * @return the response
      */
+
     public ResponseDTO logInUser(User user) {
         Optional<User> userDb = userRepository.getUserByEmailAddressAndPassword
                 (user.getEmailAddress(), user.getPassword());

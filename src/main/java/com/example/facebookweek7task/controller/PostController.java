@@ -73,6 +73,7 @@ public class PostController {
 
         model.addAttribute("editpost", post);
         model.addAttribute("loggedUser", user);
+        System.out.println(user);
 
         return "updatepost";
     }

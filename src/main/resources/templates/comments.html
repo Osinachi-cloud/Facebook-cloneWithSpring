@@ -89,7 +89,8 @@
             <div class="col-6">
               <form th:if="${loggedUser.userId == comment.user.userId}" th:action="@{/delete_comment}" method="post" th:object="${commentDelete}">
                 <input style="display: none" name="commentId" th:value="${comment.getCommentId()}"/>
-                <button class="btn-danger btn-sm" type="submit" value="">Delete Comment</button></form>
+                <button class="btn-danger btn-sm" type="submit" value="">Delete Comment</button>
+              </form>
             </div>
 
           </div>

@@ -23,4 +23,5 @@ public interface CommentService {
     void deleteComment(Long commentId);
 
     void deleteAllCommentsInPost(Post post);
+
 }

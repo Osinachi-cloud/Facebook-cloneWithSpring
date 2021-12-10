@@ -22,11 +22,7 @@ public class UserController {
     UserService userService;
 
 
-    /**
-     * Method to get the registration page in the frontend
-     * @param model
-     * @return the register page
-     */
+
     @GetMapping("/register")
     public String getRegisterPage(Model model) {
         model.addAttribute("user", new User());
@@ -34,13 +30,8 @@ public class UserController {
     }
 
 
-    /**
-     * Method to save the details of the user to the database
-     * @param user the user
-     * @param model
-     * @param redirectAttributes
-     * @return
-     */
+
+
     @PostMapping("/register")
     public String registerUser(User user, Model model, RedirectAttributes redirectAttributes) {
         ResponseDTO response = userService.addUser(user);
@@ -54,11 +45,7 @@ public class UserController {
 
     }
 
-    /**
-     * Method to get the index page
-     * @param model
-     * @return
-     */
+
     @GetMapping("/")
     public String getLogInPage(Model model) {
         model.addAttribute("user", new LogInDTO());
@@ -66,14 +53,7 @@ public class UserController {
     }
 
 
-    /**
-     * Method to log in a user
-     * @param user
-     * @param model
-     * @param redirectAttributes
-     * @param request
-     * @return
-     */
+
     @PostMapping("/login")
     public String logInUser(User user, Model model, RedirectAttributes redirectAttributes, HttpServletRequest request) {
         HttpSession session = request.getSession();
